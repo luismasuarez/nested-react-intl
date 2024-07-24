@@ -2,11 +2,16 @@ import React from "react";
 import { IntlProvider } from "react-intl";
 import { NestedIntlContext } from "./context";
 import { useLocale } from "./hooks/useLocale";
-import { Locale, TWrapperProps } from "./types/types";
+import { Locale, TIntlProviderProps } from "./types/types";
 import { setLocaleStored } from "./utils/utils";
 
-const NestedIntlProvider: React.FC<TWrapperProps> = ({ children }) => {
-  const { locale, messages, setLocale } = useLocale();
+const NestedIntlProvider: React.FC<TIntlProviderProps> = ({
+  children,
+  languages,
+}) => {
+  const { locale, messages, setLocale } = useLocale({
+    nestedMessaged: { ...languages },
+  });
 
   function selectLanguage(e: Locale) {
     setLocale(e);

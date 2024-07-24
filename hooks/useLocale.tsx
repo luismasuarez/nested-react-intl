@@ -1,21 +1,18 @@
 import { useMemo, useState } from "react";
 import { INestedMessages } from "../interfaces";
-import en from "../translations/en.json";
-import es from "../translations/es.json";
 import { Locale } from "../types/types";
 import { getDefaultLocale, parseMessages } from "../utils/utils";
 
-const messages: Record<Locale, INestedMessages> = {
-  en,
-  es,
+type Props = {
+  nestedMessaged: Record<Locale, INestedMessages>;
 };
 
-export const useLocale = () => {
+export const useLocale = ({ nestedMessaged }: Props) => {
   const defaultLocale = getDefaultLocale();
   const [locale, setLocale] = useState<Locale>(defaultLocale);
 
   const parsedMessages = useMemo(
-    () => parseMessages(messages[locale]),
+    () => parseMessages(nestedMessaged[locale]),
     [locale]
   );
 
