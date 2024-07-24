@@ -1,6 +1,6 @@
 {
   "name": "nested-react-intl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This package allows you to use nested translations in React components.",
   "main": "index.js",
   "scripts": {
