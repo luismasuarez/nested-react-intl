@@ -24,11 +24,20 @@ function App() {
   return (
     <MyCustomProvider>
       <NestedIntlProvider
-        languages={{ en: { test: "test" }, es: { test: "Prueba" } }}
+        languages={{
+          en: { test: "Test", nestedMessage: { msg: "Message" } },
+          es: { test: "Prueba" , nestedMessage: { msg: "Mensaje" } }},
+        }}
       >
         <MyCustomComponent />
       </NestedIntlProvider>
     </MyCustomProvider>
   );
 }
+```
+
+To use a typical `<FormattedMessage />` pass the nested id like:
+
+```jsx
+<FormattedMessage id="nestedMessage.msg" />
 ```
