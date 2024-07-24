@@ -1,0 +1,31 @@
+{
+  "name": "nested-react-intl",
+  "version": "1.0.0",
+  "description": "This package allows you to use nested translations in React components.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luismasuarez/nested-react-intl.git"
+  },
+  "keywords": [
+    "nested",
+    "react",
+    "intl",
+    "hook",
+    "autocomplete",
+    "translation"
+  ],
+  "author": "Luis Manuel Causa Suarez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luismasuarez/nested-react-intl/issues"
+  },
+  "homepage": "https://github.com/luismasuarez/nested-react-intl#readme",
+  "devDependencies": {
+    "react-intl": "^6.6.8",
+    "rxjs": "^7.8.1"
+  }
+}

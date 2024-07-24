@@ -1,0 +1,6 @@
+{
+  "test": "Prueba plana",
+  "nestedTest": {
+    "test": "Prueba anidada"
+  }
+}
