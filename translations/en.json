@@ -1,0 +1,6 @@
+{
+  "test": "Plane test",
+  "nestedTest": {
+    "test": "Nested test"
+  }
+}
